@@ -2,9 +2,9 @@
 
 3-day Workshop on HTML, CSS, Wordpress
 
-# Sessions
+## Sessions
 
-## Part 1: HTML
+### Part 1: HTML
 
 - Basic HTML intro: how does the Internet work? etc.
 
@@ -35,7 +35,7 @@
 
 ### Software
 
-- 
+-
 - Berkman Center Library in a box thing? Matt needs to inquire about this
 - web caching/proxy (squid?) on router
 - local Wordpress installation on RPi
