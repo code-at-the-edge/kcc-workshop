@@ -1,3 +1,7 @@
+# Vendor Packages
+vendor/
+images/wp-book/
+
 # Logs
 logs
 *.log
@@ -56,4 +60,3 @@ typings/
 
 # dotenv environment variables file
 .env
-
