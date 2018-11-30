@@ -1,4 +1,4 @@
-# kcc-workkshop
+# kcc-workshop
 3-day Workshop on HTML, CSS, Wordpress
 
 ## Part 1: HTML
