@@ -1,0 +1,273 @@
+#+REVEAL_ROOT: ./vendor/reveal.js
+#+TITLE: Wordpress: Make your own website
+* COMMENT scripts
+#+begin_src emacs-lisp
+  (setq org-html-klipse-selection-script
+  "window.klipse_settings = {selector_eval_html: '.src-html',
+                              // selector_eval_js: '.src-js',
+                              // selector_eval_python_client: '.src-python',
+                              // selector_eval_scheme: '.src-scheme',
+                              // selector: '.src-clojure',
+                              // selector_eval_ruby: '.src-ruby',
+                               codemirror_options_in: {
+                                   indentUnit: 8,
+                                   lineWrapping: true,
+                                   lineNumbers: true,
+                                   autoCloseBrackets: true
+                                   },
+                               codemirror_options_out: {
+                                   lineWrapping: true,
+                                   lineNumbers: true
+      }};")
+
+ ;; (require 'org-tempo)
+
+
+#+end_src
+
+#+RESULTS:
+#+begin_example
+window.klipse_settings = {selector_eval_html: '.src-html',
+                             // selector_eval_js: '.src-js',
+                             // selector_eval_python_client: '.src-python',
+                             // selector_eval_scheme: '.src-scheme',
+                             // selector: '.src-clojure',
+                             // selector_eval_ruby: '.src-ruby',
+                              codemirror_options_in: {
+                                  indentUnit: 8,
+                                  lineWrapping: true,
+                                  lineNumbers: true,
+                                  autoCloseBrackets: true
+                                  },
+                              codemirror_options_out: {
+                                  lineWrapping: true,
+                                  lineNumbers: true
+     }};
+#+end_example
+
+
+
+* Introductions
+
+* What is the Web?
+** All the Computers in the World
+[[file:images/internet-backbone.png]]
+** All the Computers in India
+[[./images/NKNIndia.png]]
+** All the Computers in the Room
+[[./images/home-network.png]]
+
+* How do computers talk to each other?
+[[./images/computers-talking.jpg]]
+
+** Languages
+#+begin_quote
+Hello, brothers and sisters.
+#+end_quote
+
+#+begin_quote
+नमस्कार, भाइबहिनीहरू
+#+end_quote
+
+#+begin_quote
+你好，兄弟姐妹
+#+end_quote
+
+** Computer Languages
+#+BEGIN_SRC shell
+  function sayHiJS () {
+    alert("नमस्कार");
+  }
+  sayHiJS();
+#+END_SRC
+
+#+BEGIN_SRC python
+  def sayHiPy ():
+      print ("नमस्कार")
+
+  sayHiPy ()
+#+END_SRC
+
+#+BEGIN_SRC c
+#include
+
+int main(void)
+{
+    puts("नमस्कार"");
+}
+#+END_SRC
+
+#+BEGIN_SRC shell
+puts "नमस्कार"
+
+#+END_SRC
+etc.
+
+** Making Mistakes
+- OK in human language
+- but breaks computer language
+- the web is written in computer languages
+- we use *interfaces* to make it easier for us
+
+** HTML
+We might learn tomorrow!
+#+BEGIN_SRC html
+<h1> HTML is the <br> language of the web!</h1>
+<p>We might learn more about it tomorrow</p>
+#+END_SRC
+
+* Websites vs. Facebook vs. WeChat/Twitter/SnapChat...
+- Website:
+  - open to whole world
+  - looks however you want
+  - long-term archives
+- Facebook:
+  - Facebook controls design
+  - some information only for facebook users (not everyone)
+  - good for making connections with users
+- Twitter/Instagram/etc.:
+  - good for promotion of events, time-sensitive communication
+
+* Digital Strategy
+- what would you do in your *website*?
+- what would you do on *Facebook*?
+- is Twitter useful to you also?
+
+* Wordpress!
+- 25% of websites use Wordpress!
+- "Content Management System"
+  - you enter text/pictures
+  - Wordpress turns them into web pages
+
+** How Wordpress Works
+[[./images/how-wp-works.jpg]]
+
+** How We Work in Wordpress
+- practice at [[http://www.kcc/wp-admin][www.kcc/wp-admin]]
+- login: workshop
+- password: justpractice
+
+** The Wordpress Dashboard
+[[http://www.kcc/wp-admin][link to site]]
+[[file:images/wp-book/01-dashboard.png]]
+
+** New Page
+[[file:images/wp-book/06-new-page.png]]
+
+** Make Your Own Page
+- Title :: Your Name
+- Content :: A little bit about yourself
+- Featured Image :: Blank for now
+
+** Questions so far?
+
+** Posts and Pages
+- Wordpress designed first for blogs
+- But we want *Pages*, not posts!
+[[file:images/wp-book/02-dashboard-closeup.png]]
+
+** Menus
+- main organization
+- site *sections*
+
+** Editing a Menu
+[[file:images/wp-book/39-add-new-menu-item.png]]
+
+* Site Architecture
+- Get in Groups by Organization
+- Answer these questions:
+  #+ATTR_HTML: frag appear
+  - what is the purpose of your website?
+  - who is your site for (who is the "audience")?
+  - what will they do there?
+  - what are the main *categories of pages* on the site?
+- *DRAW* some possible "layouts" ("mockups")
+
+* More Wordpress: Categories, "Media", and Themes
+
+** Wordpress.org & Wordpress.com
+- software
+- service
+- we recommend *service*: Wordpress.com
+
+** Categories and Tags
+- 2 ways to sort your content
+- we will use tags (categories not applied to pages in Wordpress.com)
+- EXERCISE: what are the best tags for your site?
+
+** Media
+- all pictures, audio and also *documents* like *.pdf* and *.docx*
+- add to media library
+- insert into posts
+
+** Themes
+- content and presentation
+- Exercise: use ~appearance --> themes~ to "preview" different themes
+- Exercise: use ~Customize~ to change options on current theme
+
+** More About Themes
+- many, many choices
+- can write them yourself!
+- but, hard to learn all the skills
+  - 4 languages :-(
+
+* Issues to Consider
+- Wordpress.com is
+  - free to use
+  - easy to manage,
+- *but*:
+  - less flexibility & functionality
+  - not great for managing
+- Websites are easy to set up, hard to maintain
+- best to have local expertise:
+  - in-organization
+  - out-of-organization
+
+* Final Exercise
+- what should we do tomorrow?
+- make your own account at [[https://Wordpress.com][Wordpress.com]]
+
+* COMMENT Remember
+html and css
+#+BEGIN_SRC html
+  <style>
+   nav {
+       background-color: gray;
+       height:30px;
+       border: 1px solid black;
+       border-radius: 10px;
+       display: flex;
+   }
+   nav ul {
+       display: flex;
+       flex-flow: row;
+       list-style-type: none;
+   }
+   nav ul li {
+       border-right: 1px solid black;
+   }
+   li:last-child {
+       border-right: none;
+   }
+  </style>
+
+  <nav>
+      <ul>
+          <a href="#"><li>Menu Item 1</li></a>
+          <a href="#"><li>Menu Item 2</li></a>
+          <a href="#"><li>Menu Item 3</li></a>
+          <a href="#"><li>Menu Item 4</li></a>
+          <a href="#"><li>Menu Item 5</li></a>
+      </ul>
+  </nav>
+
+  <div class="main">
+      <h1>Main Content goes here</h1>
+      <p>More content part 1</p>
+      <p>More content part 2</p>
+  </div>
+#+END_SRC
+
+* COMMENT
+
+modem pw: password: PQayn53365

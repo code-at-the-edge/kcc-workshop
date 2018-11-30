@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Wordpress: Make your own website</title>
+<meta name="author" content="(Matt Price)"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="./vendor/reveal.js/css/reveal.css"/>
+
+<link rel="stylesheet" href="./vendor/reveal.js/css/theme/matt.css" id="theme"/>
+
+<link rel="stylesheet" href="file:///home/matt/src/org-reveal/local.css"/>
+<link rel="stylesheet" href="./vendor/reveal.js/lib/css/zenburn.css"/>
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = './vendor/reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h1 class="title">Wordpress: Make your own website</h1><h2 class="author">Matt Price</h2><p class="date">Created: 2018-05-05 Sat 00:35</p>
+</section>
+<section>
+<section id="slide-org42faf32">
+<h2 id="org42faf32">Introductions</h2>
+
+</section>
+</section>
+<section>
+<section id="slide-org223814c">
+<h2 id="org223814c">What is the Web?</h2>
+<div class="outline-text-2" id="text-org223814c">
+</div></section>
+<section id="slide-org8ae843d">
+<h3 id="org8ae843d">All the Computers in the World</h3>
+
+<figure>
+<img src="images/internet-backbone.png" alt="internet-backbone.png">
+
+</figure>
+</section>
+<section id="slide-orgec678ed">
+<h3 id="orgec678ed">All the Computers in India</h3>
+
+<figure>
+<img src="./images/NKNIndia.png" alt="NKNIndia.png">
+
+</figure>
+</section>
+<section id="slide-org770f267">
+<h3 id="org770f267">All the Computers in the Room</h3>
+
+<figure>
+<img src="./images/home-network.png" alt="home-network.png">
+
+</figure>
+
+</section>
+</section>
+<section>
+<section id="slide-org963c646">
+<h2 id="org963c646">How do computers talk to each other?</h2>
+
+<figure>
+<img src="./images/computers-talking.jpg" alt="computers-talking.jpg">
+
+</figure>
+
+</section>
+<section id="slide-org92f957c">
+<h3 id="org92f957c">Languages</h3>
+<blockquote nil>
+<p>
+Hello, brothers and sisters.
+</p>
+</blockquote>
+
+<blockquote nil>
+<p>
+नमस्कार, भाइबहिनीहरू
+</p>
+</blockquote>
+
+<blockquote nil>
+<p>
+你好，兄弟姐妹
+</p>
+</blockquote>
+
+</section>
+<section id="slide-org4cd4854">
+<h3 id="org4cd4854">Computer Languages</h3>
+<div class="org-src-container">
+
+<pre><code class="shell" >function sayHiJS () {
+  alert("नमस्कार");
+}
+sayHiJS();
+</code></pre>
+</div>
+
+<div class="org-src-container">
+
+<pre><code class="python" >def sayHiPy ():
+    print ("नमस्कार")
+
+sayHiPy ()
+</code></pre>
+</div>
+
+<div class="org-src-container">
+
+<pre><code class="c" >#include
+
+int main(void)
+{
+    puts("नमस्कार"");
+}
+</code></pre>
+</div>
+
+<div class="org-src-container">
+
+<pre><code class="shell" >puts "नमस्कार"
+</code></pre>
+</div>
+<p>
+etc.
+</p>
+
+</section>
+<section id="slide-orgac0efbc">
+<h3 id="orgac0efbc">Making Mistakes</h3>
+<form><ul>
+<li>OK in human language</li>
+<li>but breaks computer language</li>
+<li>the web is written in computer languages</li>
+<li>we use <b>interfaces</b> to make it easier for us</li>
+
+</ul></form>
+
+</section>
+<section id="slide-org89a3086">
+<h3 id="org89a3086">HTML</h3>
+<p>
+We might learn tomorrow!
+</p>
+<iframe style="background-color:white;" height="500px" width= "100%" srcdoc='<html><body><pre class="main-container"><code data-editor-type="html"  class="klipse" >
+&amp;lt;h1&amp;gt; HTML is the &amp;lt;br&amp;gt; language of the web!&amp;lt;/h1&amp;gt;
+&amp;lt;p&amp;gt;We might learn more about it tomorrow&amp;lt;/p&amp;gt;
+
+</code></pre>
+<link rel= "stylesheet" type= "text/css" href="vendor/klipse/codemirror.css">
+<style>
+// .CodeMirror { font-size: 2em; }
+</style>
+<script>
+window.klipse_settings = { selector_eval_html: ".klipse",
+                              codemirror_options_in: {
+                                 indentUnit: 8,
+                                 lineWrapping: true,
+                                 lineNumbers: true,
+                                 autoCloseBrackets: true
+                                 },
+                             codemirror_options_out: {
+                                 lineWrapping: true,
+                                 lineNumbers: true
+    }};
+</script>
+<script src= "vendor/klipse/klipse_plugin.js"></script></body></html>
+'>
+</iframe>
+
+</section>
+</section>
+<section>
+<section id="slide-org43099d3">
+<h2 id="org43099d3">Websites vs. Facebook vs. WeChat/Twitter/SnapChat&#x2026;</h2>
+<form><ul>
+<li>Website:
+<form><ul>
+<li>open to whole world</li>
+<li>looks however you want</li>
+<li>long-term archives</li>
+
+</ul></form></li>
+<li>Facebook:
+<form><ul>
+<li>Facebook controls design</li>
+<li>some information only for facebook users (not everyone)</li>
+<li>good for making connections with users</li>
+
+</ul></form></li>
+<li>Twitter/Instagram/etc.:
+<form><ul>
+<li>good for promotion of events, time-sensitive communication</li>
+
+</ul></form></li>
+
+</ul></form>
+
+</section>
+</section>
+<section>
+<section id="slide-org4c74de4">
+<h2 id="org4c74de4">Digital Strategy</h2>
+<form><ul>
+<li>what would you do in your <b>website</b>?</li>
+<li>what would you do on <b>Facebook</b>?</li>
+<li>is Twitter useful to you also?</li>
+
+</ul></form>
+</section>
+</section>
+<section>
+<section id="slide-orgc77aa11">
+<h2 id="orgc77aa11">Wordpress!</h2>
+<form><ul>
+<li>25% of websites use Wordpress!</li>
+<li>&ldquo;Content Management System&rdquo;
+<form><ul>
+<li>you enter text/pictures</li>
+<li>Wordpress turns them into web pages</li>
+
+</ul></form></li>
+
+</ul></form>
+</section>
+<section id="slide-org039d908">
+<h3 id="org039d908">How Wordpress Works</h3>
+
+<figure>
+<img src="./images/how-wp-works.jpg" alt="how-wp-works.jpg">
+
+</figure>
+</section>
+<section id="slide-org237fe91">
+<h3 id="org237fe91">How We Work in Wordpress</h3>
+<form><ul>
+<li>practice at <a href="http://www.kcc/wp-admin">www.kcc/wp-admin</a></li>
+<li>login: workshop</li>
+<li>password: justpractice</li>
+
+</ul></form>
+</section>
+<section id="slide-orgf5b80d2">
+<h3 id="orgf5b80d2">The Wordpress Dashboard</h3>
+<p>
+<a href="http://www.kcc/wp-admin">link to site</a>
+<img src="images/wp-book/01-dashboard.png" alt="01-dashboard.png">
+</p>
+</section>
+<section id="slide-orgbf53740">
+<h3 id="orgbf53740">New Page</h3>
+
+<figure>
+<img src="images/wp-book/06-new-page.png" alt="06-new-page.png">
+
+</figure>
+</section>
+<section id="slide-org3d105e4">
+<h3 id="org3d105e4">Make Your Own Page</h3>
+<form><dl>
+<dt>Title</dt><dd>Your Name</dd>
+<dt>Content</dt><dd>A little bit about yourself</dd>
+<dt>Featured Image</dt><dd>Blank for now</dd>
+
+</dl></form>
+
+</section>
+<section id="slide-orgbc83f1a">
+<h3 id="orgbc83f1a">Questions so far?</h3>
+</section>
+<section id="slide-org2247fff">
+<h3 id="org2247fff">Posts and Pages</h3>
+<form><ul>
+<li>Wordpress designed first for blogs</li>
+<li>But we want <b>Pages</b>, not posts!</li>
+
+</ul></form>
+
+<figure>
+<img src="images/wp-book/02-dashboard-closeup.png" alt="02-dashboard-closeup.png">
+
+</figure>
+</section>
+<section id="slide-org865c813">
+<h3 id="org865c813">Menus</h3>
+<form><ul>
+<li>main organization</li>
+<li>site <b>sections</b></li>
+
+</ul></form>
+</section>
+<section id="slide-org4d9535d">
+<h3 id="org4d9535d">Editing a Menu</h3>
+
+<figure>
+<img src="images/wp-book/39-add-new-menu-item.png" alt="39-add-new-menu-item.png">
+
+</figure>
+
+</section>
+</section>
+<section>
+<section id="slide-org899ef20">
+<h2 id="org899ef20">Site Architecture</h2>
+<form><ul>
+<li>Get in Groups by Organization</li>
+<li>Answer these questions:
+<form><ul>
+<li>what is the purpose of your website?</li>
+<li>who is your site for (who is the &ldquo;audience&rdquo;)?</li>
+<li>what will they do there?</li>
+<li>what are the main <b>categories of pages</b> on the site?</li>
+</ul></form></li>
+<li><b>DRAW</b> some possible &ldquo;layouts&rdquo; (&ldquo;mockups&rdquo;)</li>
+</ul></form>
+</section>
+</section>
+<section>
+<section id="slide-orgb396e31">
+<h2 id="orgb396e31">More Wordpress: Categories, &ldquo;Media&rdquo;, and Themes</h2>
+<div class="outline-text-2" id="text-orgb396e31">
+</div></section>
+<section id="slide-org0e95df8">
+<h3 id="org0e95df8">Wordpress.org &amp; Wordpress.com</h3>
+<form><ul>
+<li>software</li>
+<li>service</li>
+<li>we recommend <b>service</b>: Wordpress.com</li>
+
+</ul></form>
+</section>
+<section id="slide-org4c107f5">
+<h3 id="org4c107f5">Categories and Tags</h3>
+<form><ul>
+<li>2 ways to sort your content</li>
+<li>we will use tags (categories not applied to pages in Wordpress.com)</li>
+<li>EXERCISE: what are the best tags for your site?</li>
+
+</ul></form>
+</section>
+<section id="slide-orgc01e8be">
+<h3 id="orgc01e8be">Media</h3>
+<form><ul>
+<li>all pictures, audio and also <b>documents</b> like <b>.pdf</b> and <b>.docx</b></li>
+<li>add to media library</li>
+<li>insert into posts</li>
+
+</ul></form>
+</section>
+<section id="slide-org96d3ba3">
+<h3 id="org96d3ba3">Themes</h3>
+<form><ul>
+<li>content and presentation</li>
+<li>Exercise: use <code>appearance --&gt; themes</code> to &ldquo;preview&rdquo; different themes</li>
+<li>Exercise: use <code>Customize</code> to change options on current theme</li>
+
+</ul></form>
+</section>
+<section id="slide-orgd0788ca">
+<h3 id="orgd0788ca">More About Themes</h3>
+<form><ul>
+<li>many, many choices</li>
+<li>can write them yourself!</li>
+<li>but, hard to learn all the skills
+<form><ul>
+<li>4 languages :-(</li>
+
+</ul></form></li>
+
+</ul></form>
+</section>
+</section>
+<section>
+<section id="slide-org534264c">
+<h2 id="org534264c">Issues to Consider</h2>
+<form><ul>
+<li>Wordpress.com is
+<form><ul>
+<li>free to use</li>
+<li>easy to manage,</li>
+
+</ul></form></li>
+<li><b>but</b>:
+<form><ul>
+<li>less flexibility &amp; functionality</li>
+<li>not great for managing</li>
+
+</ul></form></li>
+<li>Websites are easy to set up, hard to maintain</li>
+<li>best to have local expertise:
+<form><ul>
+<li>in-organization</li>
+<li>out-of-organization</li>
+
+</ul></form></li>
+
+</ul></form>
+</section>
+</section>
+<section>
+<section id="slide-org316ea0c">
+<h2 id="org316ea0c">Final Exercise</h2>
+<form><ul>
+<li>what should we do tomorrow?</li>
+<li>make your own account at <a href="https://wordpress.com">Wordpress.com</a></li>
+
+</ul></form>
+</section>
+</section>
+</div>
+</div>
+<script src="./vendor/reveal.js/lib/js/head.min.js"></script>
+<script src="./vendor/reveal.js/js/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: true,
+center: false,
+slideNumber: 'c',
+rollingLinks: false,
+keyboard: true,
+overview: true,
+margin: 0.10,
+maxScale: 1.00,
+
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+transitionSpeed: 'default',
+multiplex: {
+    secret: '', // null if client
+    id: '', // id, obtained from socket.io server
+    url: '' // Location of socket.io server
+},
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+{src: './vendor/reveal.js/plugin/klipse_reveal.js'},
+ { src: './vendor/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+ { src: './vendor/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: './vendor/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: './vendor/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+ { src: './vendor/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: './vendor/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+});
+</script>
+</body>
+</html>

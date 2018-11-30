@@ -1,0 +1,102 @@
+#+REVEAL_ROOT: ./vendor/reveal.js
+#+TITLE: Wordpress: Make your own website, Part 2
+
+* COMMENT scripts
+#+begin_src emacs-lisp
+  (setq org-html-klipse-selection-script
+  "window.klipse_settings = {selector_eval_html: '.src-html',
+                              // selector_eval_js: '.src-js',
+                              // selector_eval_python_client: '.src-python',
+                              // selector_eval_scheme: '.src-scheme',
+                              // selector: '.src-clojure',
+                              // selector_eval_ruby: '.src-ruby',
+                               codemirror_options_in: {
+                                   indentUnit: 8,
+                                   lineWrapping: true,
+                                   lineNumbers: true,
+                                   autoCloseBrackets: true
+                                   },
+                               codemirror_options_out: {
+                                   lineWrapping: true,
+                                   lineNumbers: true
+      }};")
+
+ ;; (require 'org-tempo)
+
+#+end_src
+
+#+RESULTS:
+#+begin_example
+window.klipse_settings = {selector_eval_html: '.src-html',
+                             // selector_eval_js: '.src-js',
+                             // selector_eval_python_client: '.src-python',
+                             // selector_eval_scheme: '.src-scheme',
+                             // selector: '.src-clojure',
+                             // selector_eval_ruby: '.src-ruby',
+                              codemirror_options_in: {
+                                  indentUnit: 8,
+                                  lineWrapping: true,
+                                  lineNumbers: true,
+                                  autoCloseBrackets: true
+                                  },
+                              codemirror_options_out: {
+                                  lineWrapping: true,
+                                  lineNumbers: true
+     }};
+#+end_example
+
+* Adding Links, Headers, and Lists
+** What is a link?
+#+BEGIN_SRC html
+<a href="https://google.com">Link to Google</a>
+#+END_SRC
+[[https://google.com][Link to Google]]
+Two parts:
+- "target"
+- displayed text
+
+** Headers
+- used to create an outline for your page
+- better to use headers than bold, italics,etc.
+#+BEGIN_EXPORT html
+<h1> Top Level Header</h1>
+<h3> Smaller Header</h1>
+<h6> Tiny Header</h6>
+#+END_EXPORT
+
+** Lists
+We often use lists on the web. For instance, here are the steps to sign up for Wordpress:
+- Go to [[https://Wordpress.com][Wordpress.com]]
+- Click on the ~Register~ link
+- Make sure you have spelled your email address correctly!
+
+* Images and PDFs
+- an image is a special kind of link
+- they are very important for yur website!
+- loading images takes a lot of Internet!
+  - use the smallest side image that is still good quality
+
+** Media Library
+- In Wordpress, you can show images that are stored Wordpress or somewhere else.
+- For *"external"* images, you need to get the link from your browser
+- *"Local"* images are stored in the "Media Library"
+- Documents are also stored there.
+- Use the "Add Media" button to insert a picture into your page.
+- Do the same for PDF documents
+
+** Inserting into pages
+- use the "Add Media" button to insert into pages
+- with images, you can select many pictures to make a "gallery" Try it and see howit works!
+
+* Themes
+- choose themes in "theme Gallery"
+- ~yoursite/wp-admin~ --> Appearance --> Themes
+- use "Customizer" to change options
+- remember to select from the "Free" themes!
+- We like "Franklin" and "Colinear"
+
+* Widgets
+- Calendar is nice!
+- Google Translate (for Nepali)
+- Many others
+- Custom HTML for advanced use

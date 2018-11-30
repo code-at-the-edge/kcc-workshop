@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Let&rsquo;s Learn HTML!</title>
+<meta name="author" content="(Matt Price)"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="./vendor/reveal.js/css/reveal.css"/>
+
+<link rel="stylesheet" href="./vendor/reveal.js/css/theme/matt.css" id="theme"/>
+
+<link rel="stylesheet" href="file:///home/matt/src/org-reveal/local.css"/>
+<link rel="stylesheet" href="./vendor/reveal.js/lib/css/zenburn.css"/>
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = './vendor/reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h1 class="title">Let&rsquo;s Learn HTML!</h1><h2 class="author">Matt Price</h2><p class="date">Created: 2018-05-02 Wed 16:01</p>
+</section>
+
+<section>
+<section id="slide-orge1bbb8d">
+<h2 id="orge1bbb8d">What is the Web?</h2>
+<div class="outline-text-2" id="text-orge1bbb8d">
+</div></section>
+<section id="slide-org7c447ff">
+<h3 id="org7c447ff">All the Computers in the World</h3>
+
+<figure>
+<img src="images/internet-backbone.png" alt="internet-backbone.png">
+
+</figure>
+</section>
+<section id="slide-org5f74d3b">
+<h3 id="org5f74d3b">All the Computers in India</h3>
+
+<figure>
+<img src="./images/NKNIndia.png" alt="NKNIndia.png">
+
+</figure>
+</section>
+<section id="slide-orgae79035">
+<h3 id="orgae79035">All the Computers in the Room</h3>
+
+<figure>
+<img src="./images/home-network.png" alt="home-network.png">
+
+</figure>
+</section>
+</section>
+<section>
+<section id="slide-org3a4b60d">
+<h2 id="org3a4b60d">How it Looks to You</h2>
+
+<figure>
+<img src="./images/google.png" alt="google.png">
+
+</figure>
+
+</section>
+</section>
+<section>
+<section id="slide-orgbeee2bd">
+<h2 id="orgbeee2bd">How it Looks to the Computer</h2>
+
+<figure>
+<img src="./images/google-code.png" alt="google-code.png">
+
+</figure>
+
+</section>
+</section>
+<section>
+<section id="slide-orgb0edce8">
+<h2 id="orgb0edce8">HTML is a Language!</h2>
+<div class="outline-text-2" id="text-orgb0edce8">
+</div></section>
+<section id="slide-org4d7f5db">
+<h3 id="org4d7f5db">Languages</h3>
+<blockquote nil>
+<p>
+Hello, brothers and sisters.
+</p>
+</blockquote>
+
+<blockquote nil>
+<p>
+नमस्कार, भाइबहिनीहरू
+</p>
+</blockquote>
+
+<blockquote nil>
+<p>
+你好，兄弟姐妹
+</p>
+</blockquote>
+</section>
+<section id="slide-org01fa048">
+<h3 id="org01fa048">HTML</h3>
+<form><dl>
+<dt>H</dt><dd>Hyper-</dd>
+<dt>T</dt><dd>text</dd>
+<dt>M</dt><dd>Markup</dd>
+<dt>L</dt><dd>Language</dd>
+
+</dl></form>
+</section>
+<section id="slide-orgefa349f">
+<h3 id="orgefa349f">Markup</h3>
+<iframe style="background-color:white;" height="500px" width= "100%" srcdoc='<html><body><pre class="main-container"><code data-editor-type="html"  class="klipse" >
+&amp;lt;tag attribute="value"&amp;gt;content&amp;lt;/tag&amp;gt;
+</code></pre>
+<link rel= "stylesheet" type= "text/css" href="vendor/klipse/codemirror.css">
+<style>
+// .CodeMirror { font-size: 2em; }
+</style>
+<script>
+window.klipse_settings = { selector_eval_html: ".klipse",
+                              codemirror_options_in: {
+                                 indentUnit: 8,
+                                 lineWrapping: true,
+                                 lineNumbers: true,
+                                 autoCloseBrackets: true
+                                 },
+                             codemirror_options_out: {
+                                 lineWrapping: true,
+                                 lineNumbers: true
+    }};
+</script>
+<script src= "vendor/klipse/klipse_plugin.js"></script></body></html>
+'>
+</iframe>
+<form><ul>
+<li>open <code>&lt;tag&gt;</code></li>
+<li>attributes <code>&lt;tag attr1="value1" attr2="value2"&gt;</code></li>
+<li>close <code>&lt;/tag&gt;</code></li>
+<li>in between: content</li>
+
+</ul></form>
+
+</section>
+<section id="slide-org482863c">
+<h3 id="org482863c">Markup</h3>
+<iframe style="background-color:white;" height="500px" width= "100%" srcdoc='<html><body><pre class="main-container"><code data-editor-type="html"  class="klipse" >
+&amp;lt;h2 id="greeting-section"&amp;gt;
+    Let&#39;s say hello
+&amp;lt;/h2&amp;gt;
+&amp;lt;p class="greeting"&amp;gt;
+    Hello, brothers and sisters.
+&amp;lt;/p&amp;gt;
+&amp;lt;p id="greeting"&amp;gt;
+    नमस्कार, भाइबहिनीहरू
+&amp;lt;/p&amp;gt;
+
+</code></pre>
+<link rel= "stylesheet" type= "text/css" href="vendor/klipse/codemirror.css">
+<style>
+// .CodeMirror { font-size: 2em; }
+</style>
+<script>
+window.klipse_settings = { selector_eval_html: ".klipse",
+                              codemirror_options_in: {
+                                 indentUnit: 8,
+                                 lineWrapping: true,
+                                 lineNumbers: true,
+                                 autoCloseBrackets: true
+                                 },
+                             codemirror_options_out: {
+                                 lineWrapping: true,
+                                 lineNumbers: true
+    }};
+</script>
+<script src= "vendor/klipse/klipse_plugin.js"></script></body></html>
+'>
+</iframe>
+
+</section>
+<section id="slide-orga610c18">
+<h3 id="orga610c18">Hypertext!</h3>
+<iframe style="background-color:white;" height="500px" width= "100%" srcdoc='<html><body><pre class="main-container"><code data-editor-type="html"  class="klipse" >
+&amp;lt;p&amp;gt; We can put a link inside a paragraph:
+
+  &amp;lt;a href="https://www.google.com/"&amp;gt;This is a link to google.com&amp;lt;/a&amp;gt;
+
+&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;
+  and here is an image:
+  &amp;lt;img alt="lolcat rainbow picture" src="images/rainbow-unicorn.jpg"/&amp;gt;
+&amp;lt;/p&amp;gt;
+
+</code></pre>
+<link rel= "stylesheet" type= "text/css" href="vendor/klipse/codemirror.css">
+<style>
+// .CodeMirror { font-size: 2em; }
+</style>
+<script>
+window.klipse_settings = { selector_eval_html: ".klipse",
+                              codemirror_options_in: {
+                                 indentUnit: 8,
+                                 lineWrapping: true,
+                                 lineNumbers: true,
+                                 autoCloseBrackets: true
+                                 },
+                             codemirror_options_out: {
+                                 lineWrapping: true,
+                                 lineNumbers: true
+    }};
+</script>
+<script src= "vendor/klipse/klipse_plugin.js"></script></body></html>
+'>
+</iframe>
+
+</section>
+<section id="slide-orgc29a293">
+<h3 id="orgc29a293">What Makes a Link</h3>
+<iframe style="background-color:white;" height="500px" width= "100%" srcdoc='<html><body><pre class="main-container"><code data-editor-type="html"  class="klipse" >
+&amp;lt;a href="path/to/link"&amp;gt;content&amp;lt;/a&amp;gt;
+
+</code></pre>
+<link rel= "stylesheet" type= "text/css" href="vendor/klipse/codemirror.css">
+<style>
+// .CodeMirror { font-size: 2em; }
+</style>
+<script>
+window.klipse_settings = { selector_eval_html: ".klipse",
+                              codemirror_options_in: {
+                                 indentUnit: 8,
+                                 lineWrapping: true,
+                                 lineNumbers: true,
+                                 autoCloseBrackets: true
+                                 },
+                             codemirror_options_out: {
+                                 lineWrapping: true,
+                                 lineNumbers: true
+    }};
+</script>
+<script src= "vendor/klipse/klipse_plugin.js"></script></body></html>
+'>
+</iframe>
+
+<form><ul>
+<li><b>&ldquo;PATH&rdquo;:</b> how to find the file
+<form><ul>
+<li>&ldquo;relative&rdquo;: place/in/tree</li>
+<li>&ldquo;absolute&rdquo;: <a href="https://some.host/path/on/host">https://some.host/path/on/host</a></li>
+
+</ul></form></li>
+
+</ul></form>
+
+</section>
+<section id="slide-orgd1001e8">
+<h3 id="orgd1001e8">Let&rsquo;s Try it!</h3>
+
+</section>
+</section>
+<section>
+<section id="slide-org50d2c1d">
+<h2 id="org50d2c1d">Before the Web</h2>
+<p>
+Tower of Babel
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org9abc9fc">
+<h2 id="org9abc9fc">After the Web</h2>
+<p>
+Translation
+</p>
+</section>
+</section>
+<section>
+<section id="slide-org441b82f">
+<h2 id="org441b82f">Important HTML Tags</h2>
+<div class="outline-text-2" id="text-org441b82f">
+</div></section>
+<section id="slide-orgac6c3dc">
+<h3 id="orgac6c3dc">Links</h3>
+<iframe style="background-color:white;" height="500px" width= "100%" srcdoc='<html><body><pre class="main-container"><code data-editor-type="html"  class="klipse" >
+&amp;lt;a href="https://www.google.com/"&amp;gt;This is a link to google.com&amp;lt;/a&amp;gt;
+&amp;lt;img alt="lolcat rainbow picture" src="images/rainbow-unicorn.jpg"/&amp;gt;
+
+</code></pre>
+<link rel= "stylesheet" type= "text/css" href="vendor/klipse/codemirror.css">
+<style>
+// .CodeMirror { font-size: 2em; }
+</style>
+<script>
+window.klipse_settings = { selector_eval_html: ".klipse",
+                              codemirror_options_in: {
+                                 indentUnit: 8,
+                                 lineWrapping: true,
+                                 lineNumbers: true,
+                                 autoCloseBrackets: true
+                                 },
+                             codemirror_options_out: {
+                                 lineWrapping: true,
+                                 lineNumbers: true
+    }};
+</script>
+<script src= "vendor/klipse/klipse_plugin.js"></script></body></html>
+'>
+</iframe>
+
+</section>
+<section id="slide-orgb143be6">
+<h3 id="orgb143be6">Headings</h3>
+<iframe style="background-color:white;" height="500px" width= "100%" srcdoc='<html><body><pre class="main-container"><code data-editor-type="html"  class="klipse" >
+&amp;lt;h1&amp;gt;First-Level Header&amp;lt;/h1&amp;gt;
+&amp;lt;h2&amp;gt;Second-Level Header&amp;lt;/h2&amp;gt;
+...
+&amp;lt;h6&amp;gt;Sixth-Level Header&amp;lt;/h6&amp;gt;
+
+</code></pre>
+<link rel= "stylesheet" type= "text/css" href="vendor/klipse/codemirror.css">
+<style>
+// .CodeMirror { font-size: 2em; }
+</style>
+<script>
+window.klipse_settings = { selector_eval_html: ".klipse",
+                              codemirror_options_in: {
+                                 indentUnit: 8,
+                                 lineWrapping: true,
+                                 lineNumbers: true,
+                                 autoCloseBrackets: true
+                                 },
+                             codemirror_options_out: {
+                                 lineWrapping: true,
+                                 lineNumbers: true
+    }};
+</script>
+<script src= "vendor/klipse/klipse_plugin.js"></script></body></html>
+'>
+</iframe>
+</section>
+<section id="slide-org25d8b2d">
+<h3 id="org25d8b2d">Typography</h3>
+<iframe style="background-color:white;" height="500px" width= "100%" srcdoc='<html><body><pre class="main-container"><code data-editor-type="html"  class="klipse" >
+&amp;lt;b&amp;gt;bold&amp;lt;/b&amp;gt;
+&amp;lt;strong&amp;gt;strong&amp;lt;/strong&amp;gt;
+&amp;lt;i&amp;gt;italics&amp;lt;/i&amp;gt;
+&amp;lt;em&amp;gt;emphasis&amp;lt;/em&amp;gt;
+&amp;lt;u&amp;gt;underline&amp;lt;/u&amp;gt;
+
+</code></pre>
+<link rel= "stylesheet" type= "text/css" href="vendor/klipse/codemirror.css">
+<style>
+// .CodeMirror { font-size: 2em; }
+</style>
+<script>
+window.klipse_settings = { selector_eval_html: ".klipse",
+                              codemirror_options_in: {
+                                 indentUnit: 8,
+                                 lineWrapping: true,
+                                 lineNumbers: true,
+                                 autoCloseBrackets: true
+                                 },
+                             codemirror_options_out: {
+                                 lineWrapping: true,
+                                 lineNumbers: true
+    }};
+</script>
+<script src= "vendor/klipse/klipse_plugin.js"></script></body></html>
+'>
+</iframe>
+</section>
+<section id="slide-orga038c48">
+<h3 id="orga038c48">Lists</h3>
+<iframe style="background-color:white;" height="500px" width= "100%" srcdoc='<html><body><pre class="main-container"><code data-editor-type="html"  class="klipse" >
+&amp;lt;ul&amp;gt;
+  &amp;lt;li&amp;gt;Item 1 &amp;lt;/li&amp;gt;
+  &amp;lt;li&amp;gt;Item 2 &amp;lt;/li&amp;gt;
+  &amp;lt;li&amp;gt;Item 3 &amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+
+&amp;lt;ol&amp;gt;
+  &amp;lt;li&amp;gt;Numbered Item 1&amp;lt;/li&amp;gt;
+  &amp;lt;li&amp;gt;Numbered Item 2&amp;lt;/li&amp;gt;
+  &amp;lt;li&amp;gt;Numbered Item 3&amp;lt;/li&amp;gt;
+&amp;lt;/ol&amp;gt;
+
+</code></pre>
+<link rel= "stylesheet" type= "text/css" href="vendor/klipse/codemirror.css">
+<style>
+// .CodeMirror { font-size: 2em; }
+</style>
+<script>
+window.klipse_settings = { selector_eval_html: ".klipse",
+                              codemirror_options_in: {
+                                 indentUnit: 8,
+                                 lineWrapping: true,
+                                 lineNumbers: true,
+                                 autoCloseBrackets: true
+                                 },
+                             codemirror_options_out: {
+                                 lineWrapping: true,
+                                 lineNumbers: true
+    }};
+</script>
+<script src= "vendor/klipse/klipse_plugin.js"></script></body></html>
+'>
+</iframe>
+</section>
+<section id="slide-org13a0fd4">
+<h3 id="org13a0fd4">Start and End</h3>
+<iframe style="background-color:white;" height="500px" width= "100%" srcdoc='<html><body><pre class="main-container"><code data-editor-type="html"  class="klipse" >
+&amp;lt;html&amp;gt;
+  &amp;lt;head&amp;gt;
+    &amp;lt;!-- Don&#39;t worry about "head" right now --&amp;gt;
+  &amp;lt;/head&amp;gt;
+  &amp;lt;body&amp;gt;
+    &amp;lt;p&amp;gt;everything you see goes inside &amp;lt;b&amp;gt;body&amp;lt;/b&amp;gt;&amp;lt;/p&amp;gt;
+  &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+
+</code></pre>
+<link rel= "stylesheet" type= "text/css" href="vendor/klipse/codemirror.css">
+<style>
+// .CodeMirror { font-size: 2em; }
+</style>
+<script>
+window.klipse_settings = { selector_eval_html: ".klipse",
+                              codemirror_options_in: {
+                                 indentUnit: 8,
+                                 lineWrapping: true,
+                                 lineNumbers: true,
+                                 autoCloseBrackets: true
+                                 },
+                             codemirror_options_out: {
+                                 lineWrapping: true,
+                                 lineNumbers: true
+    }};
+</script>
+<script src= "vendor/klipse/klipse_plugin.js"></script></body></html>
+'>
+</iframe>
+</section>
+<section id="slide-org43826fe">
+<h3 id="org43826fe">Try it Yourself!</h3>
+</section>
+</section>
+<section>
+<section id="slide-org179e981">
+<h2 id="org179e981">Advanced HTML</h2>
+<div class="outline-text-2" id="text-org179e981">
+</div></section>
+<section id="slide-org30a4b19">
+<h3 id="org30a4b19">Classes</h3>
+<iframe style="background-color:white;" height="500px" width= "100%" srcdoc='<html><body><pre class="main-container"><code data-editor-type="html"  class="klipse" >
+&amp;lt;p class="green"&amp;gt;this paragraph is green.&amp;lt;/p&amp;gt;
+&amp;lt;p class="red"&amp;gt;this paragraph is red.&amp;lt;/p&amp;gt;
+
+&amp;lt;style&amp;gt;
+  .red {
+
+  }
+
+  .green {
+
+  }
+&amp;lt;/style&amp;gt;
+
+</code></pre>
+<link rel= "stylesheet" type= "text/css" href="vendor/klipse/codemirror.css">
+<style>
+// .CodeMirror { font-size: 2em; }
+</style>
+<script>
+window.klipse_settings = { selector_eval_html: ".klipse",
+                              codemirror_options_in: {
+                                 indentUnit: 8,
+                                 lineWrapping: true,
+                                 lineNumbers: true,
+                                 autoCloseBrackets: true
+                                 },
+                             codemirror_options_out: {
+                                 lineWrapping: true,
+                                 lineNumbers: true
+    }};
+</script>
+<script src= "vendor/klipse/klipse_plugin.js"></script></body></html>
+'>
+</iframe>
+</section>
+<section id="slide-org1295fdb">
+<h3 id="org1295fdb">IDs</h3>
+<iframe style="background-color:white;" height="500px" width= "100%" srcdoc='<html><body><pre class="main-container"><code data-editor-type="html"  class="klipse" >
+&amp;lt;p id="sad-paragraph"&amp;gt;I&#39;m so sad&amp;lt;/p&amp;gt;
+&amp;lt;p id="happy-paragraph"&amp;gt;I&#39;m so happy&amp;lt;/p&amp;gt;
+
+&amp;lt;style&amp;gt;
+  #sad-paragraph:before {
+  content: 😢;
+  }
+
+  #happy-paragraph:before {
+  content: 😀;
+  }
+&amp;lt;/style&amp;gt;
+
+</code></pre>
+<link rel= "stylesheet" type= "text/css" href="vendor/klipse/codemirror.css">
+<style>
+// .CodeMirror { font-size: 2em; }
+</style>
+<script>
+window.klipse_settings = { selector_eval_html: ".klipse",
+                              codemirror_options_in: {
+                                 indentUnit: 8,
+                                 lineWrapping: true,
+                                 lineNumbers: true,
+                                 autoCloseBrackets: true
+                                 },
+                             codemirror_options_out: {
+                                 lineWrapping: true,
+                                 lineNumbers: true
+    }};
+</script>
+<script src= "vendor/klipse/klipse_plugin.js"></script></body></html>
+'>
+</iframe>
+</section>
+<section id="slide-orga0707b9">
+<h3 id="orga0707b9">Divs</h3>
+<iframe style="background-color:white;" height="500px" width= "100%" srcdoc='<html><body><pre class="main-container"><code data-editor-type="html"  class="klipse" >
+&amp;lt;div class="container"&amp;gt;
+  &amp;lt;div class="side"&amp;gt;
+    &amp;lt;h1&amp;gt;Sidebar&amp;lt;/h1&amp;gt;
+    &amp;lt;p&amp;gt;First thing here&amp;lt;/p&amp;gt;
+    &amp;lt;p&amp;gt;Second thing here&amp;lt;/p&amp;gt;
+  &amp;lt;/div&amp;gt;
+  &amp;lt;div class="main"&amp;gt;
+    &amp;lt;h1&amp;gt;Main Section&amp;lt;/h1&amp;gt;
+    &amp;lt;p&amp;gt;Something important here&amp;lt;/p&amp;gt;
+    &amp;lt;p&amp;gt;something else important&amp;lt;/p&amp;gt;
+
+  &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+</code></pre>
+<link rel= "stylesheet" type= "text/css" href="vendor/klipse/codemirror.css">
+<style>
+// .CodeMirror { font-size: 2em; }
+</style>
+<script>
+window.klipse_settings = { selector_eval_html: ".klipse",
+                              codemirror_options_in: {
+                                 indentUnit: 8,
+                                 lineWrapping: true,
+                                 lineNumbers: true,
+                                 autoCloseBrackets: true
+                                 },
+                             codemirror_options_out: {
+                                 lineWrapping: true,
+                                 lineNumbers: true
+    }};
+</script>
+<script src= "vendor/klipse/klipse_plugin.js"></script></body></html>
+'>
+</iframe>
+
+</section>
+</section>
+<section>
+<section id="slide-orgc22a985">
+<h2 id="orgc22a985">Remember</h2>
+<p>
+HTML and CSS
+</p>
+<iframe style="background-color:white;" height="500px" width= "100%" srcdoc='<html><body><pre class="main-container"><code data-editor-type="html"  class="klipse" >
+&amp;lt;style&amp;gt;
+ nav {
+     background-color: gray;
+     height:30px;
+     border: 1px solid black;
+     border-radius: 10px;
+     display: flex;
+ }
+ nav ul {
+     display: flex;
+     flex-flow: row;
+     list-style-type: none;
+ }
+ nav ul li {
+     border-right: 1px solid black;
+ }
+ li:last-child {
+     border-right: none;
+ }
+
+
+&amp;lt;/style&amp;gt;
+
+&amp;lt;nav&amp;gt;
+    &amp;lt;ul&amp;gt;
+        &amp;lt;a href="#"&amp;gt;&amp;lt;li&amp;gt;Menu Item 1&amp;lt;/li&amp;gt;&amp;lt;/a&amp;gt;
+        &amp;lt;a href="#"&amp;gt;&amp;lt;li&amp;gt;Menu Item 2&amp;lt;/li&amp;gt;&amp;lt;/a&amp;gt;
+        &amp;lt;a href="#"&amp;gt;&amp;lt;li&amp;gt;Menu Item 3&amp;lt;/li&amp;gt;&amp;lt;/a&amp;gt;
+        &amp;lt;a href="#"&amp;gt;&amp;lt;li&amp;gt;Menu Item 4&amp;lt;/li&amp;gt;&amp;lt;/a&amp;gt;
+        &amp;lt;a href="#"&amp;gt;&amp;lt;li&amp;gt;Menu Item 5&amp;lt;/li&amp;gt;&amp;lt;/a&amp;gt;
+    &amp;lt;/ul&amp;gt;
+&amp;lt;/nav&amp;gt;
+
+&amp;lt;div class="main"&amp;gt;
+    &amp;lt;h1&amp;gt;Main Content goes here&amp;lt;/h1&amp;gt;
+    &amp;lt;p&amp;gt;More content part 1&amp;lt;/p&amp;gt;
+    &amp;lt;p&amp;gt;More content part 2&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+
+</code></pre>
+<link rel= "stylesheet" type= "text/css" href="vendor/klipse/codemirror.css">
+<style>
+// .CodeMirror { font-size: 2em; }
+</style>
+<script>
+window.klipse_settings = { selector_eval_html: ".klipse",
+                              codemirror_options_in: {
+                                 indentUnit: 8,
+                                 lineWrapping: true,
+                                 lineNumbers: true,
+                                 autoCloseBrackets: true
+                                 },
+                             codemirror_options_out: {
+                                 lineWrapping: true,
+                                 lineNumbers: true
+    }};
+</script>
+<script src= "vendor/klipse/klipse_plugin.js"></script></body></html>
+'>
+</iframe>
+</section>
+</section>
+</div>
+</div>
+<script src="./vendor/reveal.js/lib/js/head.min.js"></script>
+<script src="./vendor/reveal.js/js/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: true,
+center: false,
+slideNumber: 'c',
+rollingLinks: false,
+keyboard: true,
+overview: true,
+margin: 0.10,
+maxScale: 1.00,
+
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+transitionSpeed: 'default',
+multiplex: {
+    secret: '', // null if client
+    id: '', // id, obtained from socket.io server
+    url: '' // Location of socket.io server
+},
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+{src: './vendor/reveal.js/plugin/klipse_reveal.js'},
+ { src: './vendor/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+ { src: './vendor/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: './vendor/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: './vendor/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+ { src: './vendor/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: './vendor/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+});
+</script>
+</body>
+</html>
